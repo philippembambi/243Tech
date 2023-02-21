@@ -16,8 +16,6 @@ const PostDetail = () => {
     var vid1 = vid.replace("@", "/")
         var vid2 = vid1.replace("@", "/")
             var videoLink = vid2.replace("@", "/")
-    
-            console.log(JsonData)
 
     const submitForm = (e) => {
         e.preventDefault()
@@ -52,7 +50,7 @@ const PostDetail = () => {
                             
                             <div className='col-lg-4'>
                                 <video style={{ height: '100%', width: '100%' }} controls>
-                                    <source src={   videoLink   } type="video/mp4" />
+                                    <source src={   localStorage.getItem('video')   } type="video/mp4" />
                                 </video>
                             </div>
 
